@@ -78,4 +78,4 @@ print(f"Total:_____________________{precio_total:.2f}")
 #APLICADOR DE DESCUENTO
 if descuento=="si":
     print(f"Porcentaje de Descuento:____{cantidad_descuento}%")
-    print(f"Total Final:_____________________{(precio_total*cantidad_descuento/100):.2f}")
+    print(f"Total Final:_____________________{(precio_total)-(precio_total*cantidad_descuento/100):.2f}")
