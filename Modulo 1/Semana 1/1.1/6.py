@@ -1,0 +1,5 @@
+V=int(input("Ingrese el costo de su cena\n"))
+P1=int(V+(V*1/10))
+P2=int(V+(V*3/20))
+P3=int(V+(V*1/5))
+print(f"Si desea agregar propina del 10% el precio sera de: {P1}\nSi desea agregar propina del 15% el precio sera de: {P2}\nSi desea agregar propina del 20% el precio sera de: {P3}")
