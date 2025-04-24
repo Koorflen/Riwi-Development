@@ -7,45 +7,48 @@ numero_de_productos=[]
 
 #INICIO
 print("---Bienvenido a SuperRiwi---")
-try:
-    cantidad_productos=int(input("Cuantos productos deseas adquirir?\n"))
-except:
-    print("Ingresa un valor numerico")
-    
-#VALIDACION DE QUE INGRESE UN NUMERO NATURAL O CERO
-if cantidad_productos<0:
-    
-    while cantidad_productos<0:
-        try:
-            cantidad_productos=int(input("Porfavor ingresa una cantidad mayor o igual a cero\n"))
-        except:
-            print("Ingresa un valor numerico")
 
-elif cantidad_productos>0:
+#LECTURA DE CUANTOS PRODUCTOS LLEVARA
+while True:    
+    try:
+        cantidad_productos = int(input("¿Cuántos productos deseas adquirir?\n"))
+        if cantidad_productos < 0:
+            print("Por favor, ingresa una cantidad mayor o igual a cero.")
+        else:
+            break
+    except ValueError:
+        print("Por favor, ingresa un valor numérico válido.")
+
+
+if cantidad_productos>0:
     
     #BUCLE PARA LEER TODOS LOS PRODUCTOS, SU PRECIO, Y LA CANTIDAD QUE DESEE LLEVAR
     for i in range(cantidad_productos):
         
         nombre=str(input("Ingresa el nombre del producto\n")).lower()
+        print("Ingresa el precio del producto:")
         
-        try:
-            precio=float(input("Ingresa el precio del producto\n"))
-        except:
-            print("Ingresa un valor numerico")
+        while True:
+            try:
+                precio = float(input())
+                if precio < 0:
+                    print("Ingresa un precio mayor o igual a cero.")
+                else:
+                    break  
+            except ValueError:
+                print("Ingresa un valor numérico válido.")
+
+        print(f"Cuantos {nombre} deseas adquirir?")
         
-        #VALIDACION DE QUE PUSO UN PRECIO NO NEGATIVO
-        if precio<0:
-        
-            while precio<0:
-                precio=float(input("Ingresa un precio mayor o igual a cero\n"))
-        
-        cantidad_del_producto=int(input(f"Cuantos {nombre} deseas adquirir?\n"))
-        
-        #VALIDACION DE QUE PUSO UNA CANTIDAD DE PRODUCTO NO NEGATIVA
-        if cantidad_del_producto<=0:
-            
-            while cantidad_del_producto<=0:
-                cantidad_del_producto=int(input(f"Ingresa una cantidad positiva\n"))
+        while True:
+            try:
+                cantidad_del_producto=int(input())
+                if cantidad_del_producto<=0:
+                    print("Ingresa una cantidad positiva\n")
+                else:
+                    break
+            except ValueError:
+                print("Ingresa un valor numérico válido.")
 
         #SE AGREGAN LOS DATOS RECOLECTADOS A LOS DICCIONARIOS Y LAS LISTAS
         nombre_y_precio[nombre]=precio
@@ -58,13 +61,16 @@ elif cantidad_productos>0:
     
     #PROCESO SI HAY DESCUENTO
     if descuento=="si":
-        
-        cantidad_descuento=float(input("De cuanto es tu descuento?\n"))
-        
-        #VALIDACION DE QUE SE PUSO UN PORCENTAJE DE DESCUENTO ENTRE 0 Y 100
-        while cantidad_descuento<0 or cantidad_del_producto>100:
-            cantidad_descuento=float(input("Porfavor ingresa una cantidad entre 0 y 100\n"))
-    
+        print("De cuanto es tu descuento?")
+        while True:
+            try:
+                cantidad_descuento=float(input())
+                if cantidad_descuento<0 or cantidad_del_producto>100:
+                    print("Porfavor ingresa una cantidad entre 0 y 100")
+                else:
+                    break
+            except ValueError:
+                print("Ingresa un valor numérico válido.")
 precio_total=0
 print("-----LISTA DE PRODUCTOS-----")
 
