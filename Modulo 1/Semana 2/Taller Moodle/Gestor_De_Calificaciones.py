@@ -1,17 +1,20 @@
 ### MENU PRINCIPAL ###
 
 decision_menu_principal=0
+def menu():
+    global decision_menu_principal
+    while decision_menu_principal not in (1, 2, 3):
+        print("----------Riwi Ratings----------")
+        print("Bienvenido a Riwi Ratings\n¿Que deseas hacer?")
+        print("1. Ingresar una calificacion\n2. Ingresar varias calificaciones\n3. Salir")
+        try:
+            decision_menu_principal=int(input())
+            if decision_menu_principal not in (1, 2, 3):
+                print("Ingresa una opcion valida\n")
+        except ValueError:
+            print("Ingresa el valor numerico de tu decision\n")
 
-while decision_menu_principal not in (1, 2, 3):
-    print("----------Riwi Ratings----------")
-    print("Bienvenido a Riwi Ratings\n¿Que deseas hacer?")
-    print("1. Ingresar una calificacion\n2. Ingresar varias calificaciones\n3. Salir")
-    try:
-        decision_menu_principal=int(input())
-        if decision_menu_principal not in (1, 2, 3):
-            print("Ingresa una opcion valida\n")
-    except ValueError:
-        print("Ingresa el valor numerico de tu decision\n")
+menu()
    
 ###SUB-MENUS###
 
@@ -33,7 +36,8 @@ match decision_menu_principal:
             print("¡Aprobaste!")
         else:
             print("No aprobaste. Sigue intentandolo")
-    
+        decision_menu_principal=0
+        menu()
     ##INGRESO DE VARIAS CALIFICACIONES##
     
     case 2:
@@ -59,16 +63,18 @@ match decision_menu_principal:
         #MENU LISTAS#
         
         decision_menu_lista=0
-        while decision_menu_lista not in (1, 2, 3):
-            print("Que deseas hacer con tus calificaciones?")
-            print("1. Calcular promedio\n2. Contar calificaciones mayores\n3. Verificar y contar calificaciones especificas")
-            try:
-                decision_menu_lista=int(input())
-                if decision_menu_lista not in (1, 2, 3):
-                    print("Ingresa una opcion valida\n")
-            except ValueError:
-                print("Ingresa el valor numerico de tu decision\n")
-        
+        def sub_menu():
+            while decision_menu_lista not in (1, 2, 3):
+                global decision_menu_lista
+                print("Que deseas hacer con tus calificaciones?")
+                print("1. Calcular promedio\n2. Contar calificaciones mayores\n3. Verificar y contar calificaciones especificas")
+                try:
+                    decision_menu_lista=int(input())
+                    if decision_menu_lista not in (1, 2, 3):
+                        print("Ingresa una opcion valida\n")
+                except ValueError:
+                    print("Ingresa el valor numerico de tu decision\n")
+        sub_menu()
         match decision_menu_lista:
             
             #CALCULAR PROMEDIO
@@ -78,7 +84,8 @@ match decision_menu_principal:
                 for i in calificaciones:
                     sumatoria+=i
                 print(f"Tu promedio es de: {sumatoria/len(calificaciones):.2f}")
-            
+                decision_menu_lista=0
+                sub_menu()
             #CONTAR CALIFICACIONES MAYORES A UNA CALIFICACION ESPECIFICA
             
             case 2:
@@ -99,7 +106,8 @@ match decision_menu_principal:
                         mayores_que_valor+=1
                     posicion+=1
                 print(f"Cantidad de calificaciones mayores que {valor} : {mayores_que_valor}")
-            
+                decision_menu_lista=0
+                sub_menu()
             #CONTAR CUANTAS VECES APARECE UNA MISMA CALIFICACION
             
             case 3:
@@ -123,7 +131,11 @@ match decision_menu_principal:
                     print(f"La calificacion {calificacion_especifica} aparece {contador} veces en la lista.")
                 else:
                     print(f"La calificacion {calificacion_especifica} no se encuentra en la lista.")
-
+                decision_menu_lista=0
+                sub_menu()
+        decision_menu_principal=0
+        menu()
+        
     ##SALIR##
     
     case 3:
