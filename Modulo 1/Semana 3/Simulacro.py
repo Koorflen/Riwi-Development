@@ -33,6 +33,18 @@ def main_menu():
             consult()
             main_menu_decision=0
             main_menu()
+        case 3:
+            update()
+            main_menu_decision=0
+            main_menu()
+        case 4:
+            remove()
+            main_menu_decision=0
+            main_menu()
+        case 5:
+            total_value()
+            main_menu_decision=0
+            main_menu()
         case 6:
             print("Thank you for using our services")
 
@@ -156,16 +168,99 @@ def consult():
     print("what book do you want to search for?")
     consult_book=str(input())
     for book in Inventory:
+        find=False
         if book["title"]==consult_book:
             find=True
             print(f"Title: {book["title"]}\n"
                   f"Price: {book["price"]}\n"
                   f"Quantity: {book["quantity"]}")
             break
-        if not find:
+    if not find:
+        print("Book not found")
+            
+def update():
+    print("---->Update Price<----")
+    print("Which book do you want to update the price of?")
+    book_update=str(input())
+    for book in Inventory:
+        find=False
+        if book["title"]==book_update:
+            find=True
+            confirm_confirm=0
+            while confirm_confirm not in (1,2):
+                print(f"Title: {book["title"]}\n"
+                    f"Price: {book["price"]}\n"
+                    f"Quantity: {book["quantity"]}"
+                    "confirmas que desas actualizar el precio de este libro?\n"
+                    "1. Si\n"
+                    "2. No")
+                confirm=str(input())
+                if confirm.isdigit():
+                    confirm_confirm=int(confirm)
+                    if confirm_confirm==1:
+                        new_price=-1
+                        while new_price<0:
+                            print(f"Cual sera el nuevo precio de {book["title"]}?")
+                            posibility_new_price=str(input())
+                            if is_float(posibility_new_price):
+                                new_price=float(posibility_new_price)
+                                print(f"Title: {book["title"]}\n"
+                                    f"Previous price: {book["price"]}")
+                                book["price"]=new_price
+                                print(f"New price: {book["price"]}\n"
+                                    f"Quantity: {book["quantity"]}")
+                    elif confirm_confirm==2:
+                        main_menu()
+                else:
+                    print("Invalid Data")
+    if not find:
             print("Book not found")
             
+def remove():
+    print("---->Remove<----")
+    print("Que libro deseas eliminar?")
+    book_remove=str(input())
+    find=False
+    for book in Inventory:
+        if book["title"]==book_remove:
+            find=True
+            print(f"Title: {book["title"]}\n"
+                  f"Price: {book["price"]}\n"
+                  f"Quantity: {book["quantity"]}"
+                  "Confirmas que deseas elminar el libro?\n"
+                  "1. Si\n"
+                  "2. No")
+            confirm=str(input())
+            if confirm.isdigit():
+                confirm_confirm=int(confirm)
+                if confirm_confirm==1:
+                    del Inventory[book]
+                    print("Libro eliminado exitosamente")
+                elif confirm_confirm==2:
+                    main_menu()
+            else:
+                print("Invalid Data")
+    if not find:
+        print("Book not found")
+            
+def total_value():
+    print("---->Inventory Total Value<----")
+    total_value=0
+    for book in Inventory:
+        total_value+=book["price"]*book["quantity"]
+    print(f"The total value of the inventory is: ${total_value:.2f}")
+
+
+    
 ##Continue in home##
-                
+def is_float(num):
+    parts = num.split(".")
+    return (
+        len(parts) == 2 and
+        parts[0].isdigit() and
+        parts[1].isdigit()
+    ) or num.isdigit()
+    
+
 main_menu()
 

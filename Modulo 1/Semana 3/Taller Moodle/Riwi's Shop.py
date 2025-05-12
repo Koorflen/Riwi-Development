@@ -97,16 +97,18 @@ def consult():
                   f"Precio: {Inventario[product][0]}\n"
                   f"Unidades: {Inventario[product][1]}")
             break
-        if not find:
-            print("El producto no esta en el inventario")
+    if not find:
+        print("El producto no esta en el inventario")
 
 
 ## ACTUALIZAR DATOS SOBRE UN PRODUCTO ##
 def update():
+    find=False
     print("---->Actualizar<----")
     print("A que producto deseas actualizarle el precio?")
     update_product=str(input())
     for product in Inventario:
+        find=True
         if update_product==product:
             decision_update=0
             while decision_update not in (1,2):
@@ -120,6 +122,9 @@ def update():
                 except ValueError:
                     print("Dato invalido")
             break
+    if not find:
+        print("El producto no esta en el inventario")
+        main_menu()
     
     # MENU SEGUN QUE DATO DESEA ACTUALIZAR #
     match decision_update:
@@ -189,8 +194,8 @@ def deleted():
                     del Inventario[deleted_product]
                     print("Producto eliminado exitosamente")
                 break
-            if not find:
-                print("El producto no esta en el inventario")
+        if not find:
+            print("El producto no esta en el inventario")
 
 
 ## CALCULAR VALOR DEL INVENTARIO ##

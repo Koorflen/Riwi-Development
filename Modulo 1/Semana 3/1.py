@@ -7,7 +7,11 @@ def menu():
     decision_menu=0
     while decision_menu not in (1,2,3,4):
         print("-------->Riwi's Pets<--------")
-        print("Que deseas hacer?\n1. Agregar animal\n2. Eliminar animal\n3. Ver animales ingresados\n4. Salir")
+        print("Que deseas hacer?\n"
+              "1. Agregar animal\n"
+              "2. Eliminar animal\n"
+              "3. Ver animales ingresados\n"
+              "4. Salir")
         decision_menu=int(input())
         if decision_menu not in (1,2,3,4):
             print("Ingresa el valor numerico de tu decision")
