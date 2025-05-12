@@ -27,23 +27,18 @@ def main_menu():
     match main_menu_decision:
         case 1:
             add()
-            main_menu_decision=0
             main_menu()
         case 2:
             consult()
-            main_menu_decision=0
             main_menu()
         case 3:
             update()
-            main_menu_decision=0
             main_menu()
         case 4:
             remove()
-            main_menu_decision=0
             main_menu()
         case 5:
             total_value()
-            main_menu_decision=0
             main_menu()
         case 6:
             print("Thank you for using our services")

@@ -105,11 +105,11 @@ def consult():
 def update():
     find=False
     print("---->Actualizar<----")
-    print("A que producto deseas actualizarle el precio?")
+    print("Que producto deseas actualizar?")
     update_product=str(input())
     for product in Inventario:
-        find=True
         if update_product==product:
+            find=True
             decision_update=0
             while decision_update not in (1,2):
                 try:
