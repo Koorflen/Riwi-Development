@@ -19,13 +19,16 @@ def menu():
     match decision_menu:
         case 1:
             agregar_animal()
+            menu()
         case 2:
             eliminar_animal()
+            menu()
         case 3:
             ver_animales_ingresados()
+            menu()
         case 4:
             print("Muchas gracias por usar nuestros servicios")
-            
+
 def agregar_animal():
     cuantos_animales=0
     while cuantos_animales<1:
@@ -38,14 +41,43 @@ def agregar_animal():
     
     for indice in range(cuantos_animales):
         Name=str(input("Ingresa el nombre del animal a ingresar:\n"))
-        Year=int(input("Ingresa la edad del animal:\n"))
-        Sick=str(input("El animal esta enfermo?(Si/No)\n")).lower()
         
+        Year=-1
+        while Year<0:
+            try:
+                Year=int(input("Ingresa la edad del animal:\n"))
+                if Year<0:
+                    print("Edad invalida")
+            except ValueError:
+                print("Edad invalida")
+        
+        Sick=""
+        while Sick not in ("si","no"):
+            Sick=str(input("El animal esta enfermo?(Si/No)\n")).lower()
+            if Sick not in ("si","no"):
+                print("Respuesta invalida. Escribe si o no")
+
+        Names.append(Name)
+        Years.append(Year)
+        Sicks.append(Sick)
+
 def eliminar_animal():
-    print("Yes")
+    eliminar=str(input("Escribe el nombre del animal que deseas eliminar:\n"))
+    if eliminar in Names:
+        posicion=Names.index(eliminar)
+        del Names[posicion]
+        del Years[posicion]
+        del Sicks[posicion]
+        print("Animal eliminado exitosamente")
+    else:
+        print("Animal no encontrado")
 
 def ver_animales_ingresados():
-    print("Yes")
-    
-    
+    if len(Names)==0:
+        print("No hay animales registrados")
+    else:
+        print("Animales registrados:")
+        for i in range(len(Names)):
+            print(f"Nombre: {Names[i]} - Edad: {Years[i]} - Enfermo: {Sicks[i]}")
+
 menu()
