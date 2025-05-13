@@ -254,6 +254,7 @@ def update_products():
             case 1:
                 new_price=0
                 while new_price<1:
+                
                     try:
                         print("Enter the new product's price: ")
                         new_price=float(input())
@@ -303,6 +304,7 @@ def remove_product():
         print("---->Remove product<----")
         print("Which product do you want to delete?")
         deleted_product=str(input())
+        count=0
         for product in Inventory:
             if deleted_product==product["name"]:
                 find=True
@@ -322,11 +324,12 @@ def remove_product():
                     except ValueError:
                         print("Invalid Data\n")
                 if confirmed_deleted==1:
-                    del Inventory[product]
+                    del Inventory[count]
                     print("product successfully removed\n")
                 break
-            if not find:
-                print("Product not found\n")
+            count+=1
+        if not find:
+            print("Product not found\n")
 
 ###SUB-MENU FOR CALCULATE THE TOTAL VALUE OF THE INVENTORY###
 def calculate_total_value():
