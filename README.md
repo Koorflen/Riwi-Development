@@ -1,2 +1,0 @@
-# prueba
-ejercicios python
