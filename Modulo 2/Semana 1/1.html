@@ -29,18 +29,199 @@
             <li>retira el vaso de la nevera, toma el colador y vierte la mezcla en el.</li>
         </ol>
         <hr>
-        <a href="https://www.google.com/">Que sera?</a>
+        <a href="https://www.google.com/" target="_blank">Que sera?</a>
         <br><br>
-        <a href="contacto.html">Contacto</a>
+        <a href="contacto.html" target="_blank">Contacto</a>
         <br><br>
-        <a href="https://github.com/Koorflen/Riwi-Development">
+        <a href="https://github.com/Koorflen/Riwi-Development" target="_blank">
             <img src="/Modulo 2/Semana 1/Assets/logo_github.png" alt="no se" width="60" height="60">
         </a>
         <br><br>
         <img src="https://static.vecteezy.com/system/resources/previews/023/741/066/non_2x/discord-logo-icon-social-media-icon-free-png.png" alt="no se" width="60" height="60">
         <br><br>
         <video width="700" height="400" src="Assets/Canción Barcelona vs Real Madrid 3-2 (Parodia Ozuna - Se Preparó).mp4" controls></video>
+        <br><br>
         <iframe width="700" height="400" src="https://www.youtube.com/embed/ELSm-G201Ls?si=Gke0Z9tk9siXpcT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        
-        
+        <table border="2">
+            <tr>
+                <th>Name</th>
+                <th>Years</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>Any</td>
+                <td>24</td>
+                <td>Honda</td>
+            </tr>
+            <tr>
+                <td>Manuel</td>
+                <td>22</td>
+                <td>Girardot</td>
+            </tr>
+            <tr>
+                <td>Alejandro</td>
+                <td>18</td>
+                <td>Ibague</td>
+            </tr>
+        </table>
+        <nav>
+        <ul>
+            <li><a href="https://github.com/Koorflen/Riwi-Development" target="_blank">Inicio</a></li>
+            <li><a href="https://www.instagram.com/koorflen/" target="_blank">Acerca de</a></li>
+            <li><a href="https://wa.me/573224085500?text=Hola%20Guapo" target="_blank">Contacto</a></li>
+        </ul>
+        </nav>
+        <form action="submit_form.php" method="post">
+            <p>
+                <label for="nombre">Nombre:</label>
+                <br>
+                <input type="text" id="nombre" name="nombre" required>
+            </p>
+
+            <p>
+                <label for="correo">Correo electrónico:</label>
+                <br>
+                <input type="email" id="correo" name="correo" required>
+            </p>
+
+            <p>
+                <label for="mensaje">Mensaje:</label>
+                <br>
+                <textarea id="mensaje" name="mensaje" rows="5" cols="40" required></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Enviar Mensaje</button>
+            </p>
+        </form>
+        <br>
+        <form action="submit_form_2.php" method="post">
+            <p>
+                <label for="nombre">Nombre:</label>
+                <br>
+                <input type="text" id="nombre" name="nombre" required>
+            </p>
+
+            <p>
+                <label for="correo">Correo electrónico:</label>
+                <br>
+                <input type="email" id="correo" name="correo" required>
+            </p>
+
+            <p>
+                <label for="contraseña">Contraseña:</label>
+                <br>
+                <input type="password" name="contraseña" id="contraseña" required>
+            </p>
+
+            <p>
+                <label for="years">Edad:</label>
+                <br>
+                <input type="" name="years" id="years" min="1" required>
+            </p>
+
+            <p>
+                <label for="birthdate">Fecha de nacimiento:</label>
+                <br>
+                <input type="date" name="birthdate" id="birthdate" required>
+            </p>
+
+            <p>
+                <label>Sexo:</label>
+                <br>
+                <input type="radio" name="sexo" id="sexomasculino" value="masculino" required>
+                <label for="sexomasculino">Masculino</label>
+                <br>
+                <input type="radio" name="sexo" id="sexofemenimo" value="femenino">
+                <label for="sexofemenino">Femenino</label>
+                <br>
+                <input type="radio" name="sexo" id="sexootro" value="otro">
+                <label for="sexo">Otro</label>
+            </p>
+
+            <p>
+                <label for="ciudad">Ciudad:</label>
+                <br>
+                <select id="ciudad" name="ciudad" required>
+                    <option value="">-- Selecciona tu ciudad --</option>
+                    <option value="medellin">Medellín</option>
+                    <option value="bogota">Bogotá</option>
+                    <option value="cali">Cali</option>
+                    <option value="barranquilla">Barranquilla</option>
+                    <option value="cartagena">Cartagena</option>
+                </select>
+            </p>
+
+            <p>
+                <button type="submit">Enviar</button>
+            </p>
+        </form>
+        <ul>
+            <li><a href="./perfil.html" target="_blank">Perfil</a></li>
+        </ul>
+        <form action="submit_form_3.php" method="post">
+            <p>
+                <label for="User">Usuario</label>
+                <br>
+                <input type="text" name="user" id="user" maxlength="12" pattern="[az-A-Z0-9]+" title="Solo letras y numeros. Maximo 12 caracteres" required>
+            </p>
+
+            <p>
+                <label for="contraseña">Contraseña</label>
+                <br>
+                <input type="password" name="contraseña" id="contraseña" required>
+            </p>
+        </form>
+        <table border="2">
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Referencia</th>
+                <th>Compra</th>
+            </tr>
+
+            <tr>
+                <td>KZ ZSX Pro</td>
+                <td>$209.900</td>
+                <td>
+                    <center><img width="60" height="60" src="./Assets/KZ_ZSX_PRO.jpg" alt=""></center>
+                </td>
+                <td>
+                    <button>
+                        <p>Comprar</p>
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Estuche KZ Semirigido
+                    <center>+</center>
+                    Ear Tips KZ Memory Foam KZ
+                </td>
+                <td>$29.900</td>
+                <td>
+                    <center><img width="60" height="60" src="./Assets/Estuche+Ear_Tips.jpg" alt=""></center>
+                </td>
+                <td>
+                    <button>
+                        <p>Comprar</p>
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Modulo Bluetooth 5.2 KZ</td>
+                <td>$182.364</td>
+                <td>
+                    <center><img width="60" height="60" src="./Assets/Modulo_bluetooth.jpg" alt=""></center>
+                </td>
+                <td>
+                    <button>
+                        <p>Comprar</p>
+                    </button>
+                </td>
+            </tr>
+        </table>
     </body>
 </html>
