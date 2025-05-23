@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Personal Portafolio</title>
+        <meta name="description" content="Personal portafolio of Alejandro as a Riwi developer.">
+    </head>
+    <body>
+        <h1>Alejandro - Riwi Developer</h1>
+        <nav>
+            <a href="#about-me">About Me</a>
+            <br>
+            <a href="#projects">Projects</a>
+            <br>
+            <a href="#contact">Contact</a>
+        </nav>
+        <hr>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <img width="200" height="300" src="./Assets/Profile_photo.jpg" alt="Alejandro's profile photo">
+            <p>Hello, I'm Alejandro</p>
+            <p>I'm 18 years old and passionate about music, math, programming, and video games. I study at RIWI and the National University of Colombia. I also study music independently, focusing on trombone. I have been living in Medellin with my siblings since February 2024. I have been studying music for 7 years, specialized mathematics for 8 years in addition to school, and programming for a year.</p>
+        <hr>
+        <h2>Habilities</h2>
+        <ul>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Mathematics</li>
+            <li>
+                Play:
+                <ul>
+                    <li>Trombone</li>
+                    <li>Trumpet</li>
+                    <li>Tuba</li>
+                    <li>Batery</li>
+                    <li>Baritone</li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <h3>Project 1: Portfolio Website</h3>
+            <p>this is my first project where I built a personal portfolio using only HTML</p>
+            <img width="700" height="300" src="./Assets/Portafolio.png" alt="Portfolio's screenshot">
+            <table border="2">
+                <tr>
+                    <th>Project Name</th>
+                    <th>Technologies Used</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Portfolio Website</td>
+                    <td>HTML</td>
+                    <td><a href="./Portafolio.html" target="_blank">View Project</a></td>
+                </tr>
+            </table>
+            <hr>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="submit_form.php" method="post">
+                <p>
+                    <label for="name">Name:</label>
+                    <br>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="message">Message:</label>
+                    <br>
+                    <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Send Message</button>
+                </p>
+            </form>
+            <table border="1">
+                <tr>
+                    <th>Whatsapp</th>
+                    <th>Instagram</th>
+                    <th>GitHub</th>
+                    <th>Discord</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://wa.me/573224085500?text=Hola%20Guapo" target="_blank">
+                            <img width="80" height="80" src="./Assets/whatsapp.webp" alt="no se para que sirve esto">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://www.instagram.com/koorflen/" target="_blank">
+                            <img width="80" height="80" src="./Assets/instagram.png" alt="no se para que sirve esto">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/Koorflen/Riwi-Development" target="_blank">
+                            <img width="60" height="60" src="./Assets/logo_github.png" alt="no se para que sirve esto">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://discordapp.com/users/639562192764796968" target="_blank">
+                            <img width="60" height="60" src="./Assets/discord.webp" alt="no se para que sirve esto">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </body>
+</html>
