@@ -1,0 +1,17 @@
+p {
+    color: red;
+    font-family: "Dalto";
+    font-size: 28px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: left;
+    text-decoration: none;
+    line-height: 2;
+    letter-spacing: 15px;
+    text-transform:capitalize;
+    word-wrap: break-word;
+}
+
+h1 {
+    text-align: center;
+}
