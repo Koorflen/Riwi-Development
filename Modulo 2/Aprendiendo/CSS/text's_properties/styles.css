@@ -1,13 +1,13 @@
 p {
     color: red;
-    font-family: Montserrat ;
-    font-size: 28px;
-    font-weight: 900;
+    font-family: "Montserrat" ;
+    font-size: 18px;
+    font-weight: 500;
     font-style: italic;
     text-align: left;
     text-decoration: none;
     line-height: 2;
-    letter-spacing: 15px;
+    letter-spacing: 3px;
     text-transform:capitalize;
     word-wrap: break-word;
 }

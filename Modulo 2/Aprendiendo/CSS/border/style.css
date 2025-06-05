@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+}
+
+div {
+    color: lime;
+    background-color: black;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+    /*Esta duro el border de double y groove*/
+    /*width style color*/
+    border: 3px solid lime;
+    border-radius: 50px 6px;
+}
+
+input{
+    margin-top: 7px;
+    padding: 4px 9px;
+    border: none;
+    border-bottom: 1px solid lime;
+    border-left: 1px solid lime;
+    background-color: transparent;
+    color:lime;
+    border-radius: 12px;
+}

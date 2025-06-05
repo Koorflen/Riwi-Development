@@ -1,0 +1,8 @@
+.box {
+    width: 100px;
+    height: 100px;
+    /*primero rojo segundo verde y tercero azul, orde de 0-9 y luego de a-f 0 es nada y 1 es muy oscuro, f es el color mas saturado o mas puro*/
+    background-color: #0fd;
+    margin: 20px;
+}
+
