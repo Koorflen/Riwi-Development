@@ -18,7 +18,9 @@
 *vw=todo de ancho(0-100)
 *vmin=compara el width y el height y toma el valor mas pequeño
 *vmax=compara el width y el height y toma el valor mas grande
-*
+*Unidades raras:
+*ex=la altura de la letra x es un 1ex
+*ch=el ancho del 0 es un 1ch
 */
 
 html {
