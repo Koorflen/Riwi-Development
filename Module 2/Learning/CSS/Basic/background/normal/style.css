@@ -1,0 +1,41 @@
+body {
+    background-color: #48e;
+    margin: 0;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 26px;
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+}
+/*
+background size: 
+percent: la adecua al tamaño del width
+contain: la fuerza a entrar almenos una vez
+cover: hace que la imagen sin importar la dimension se ajuste a la resolucion que esta debe de tener
+normalmente con cover se usa background-position: (position);
+*/
+.box {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    /*background-color: #9108;
+    background-image: url("https://asset.msi.com/global/picture/game-team/fnatic/fnatic_logo.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+    background: url("https://asset.msi.com/global/picture/game-team/fnatic/fnatic_logo.jpg") top / cover no-repeat fixed #9108;
+}
+
+.opaco {
+    width: 100%;
+    height: 100%;
+    background-color: #0009;
+}
