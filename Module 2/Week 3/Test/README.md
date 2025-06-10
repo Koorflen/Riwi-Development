@@ -79,15 +79,15 @@ El proyecto está organizado en múltiples archivos HTML para cada sección prin
 ## Funcionalidades Principales
 
 * **Presentación Personal**: Una sección dedicada a introducirme y mis habilidades.
-* [cite_start]**Portafolio de Proyectos**: Una galería con al menos tres proyectos destacados.
-* [cite_start]**Formulario de Contacto**: Un formulario para que los visitantes puedan ponerse en contacto conmigo.
-* [cite_start]**Diseño Responsivo**: El sitio se adapta a diferentes tamaños de pantalla (escritorio, tablet y móvil).
-* [cite_start]**Estilos Atractivos**: Uso de CSS externo, colores, sombras, tipografía personalizada y transiciones suaves.
+**Portafolio de Proyectos**: Una galería con al menos tres proyectos destacados.
+**Formulario de Contacto**: Un formulario para que los visitantes puedan ponerse en contacto conmigo.
+**Diseño Responsivo**: El sitio se adapta a diferentes tamaños de pantalla (escritorio, tablet y móvil).
+**Estilos Atractivos**: Uso de CSS externo, colores, sombras, tipografía personalizada y transiciones suaves.
 
 ## Tecnologías Utilizadas
 
-* [cite_start]HTML5 (con estructura semántica) 
-* [cite_start]CSS3 (con Flexbox y CSS Grid para layout responsivo) 
+HTML5 (con estructura semántica) 
+CSS3 (con Flexbox y CSS Grid para layout responsivo) 
 
 ## Cómo Ver el Proyecto
 
@@ -97,10 +97,10 @@ El proyecto está organizado en múltiples archivos HTML para cada sección prin
 
 ## Criterios de Aceptación Cumplidos
 
-* [cite_start]**Estructura HTML**: Uso de etiquetas semánticas (`<header>`, `<nav>`, `<main>`, `<footer>`) correctamente. [cite_start]Todas las secciones requeridas (presentación, portafolio y contacto) están presentes y funcionales en páginas independientes.
-* [cite_start]**Estilos CSS**: El archivo `styles.css` está bien estructurado y separado del HTML. [cite_start]Se aplican estilos consistentes en colores, tipografía y transiciones.
-* [cite_start]**Diseño Responsivo**: El sitio se adapta correctamente a las resoluciones de escritorio, tablet y móvil. [cite_start]Flexbox y Grid están implementados correctamente para organizar el contenido.
-* [cite_start]**Interactividad**: Los botones y enlaces tienen transiciones suaves. [cite_start]Los elementos del portafolio muestran efectos al interactuar con ellos (hover).
+**Estructura HTML**: Uso de etiquetas semánticas (`<header>`, `<nav>`, `<main>`, `<footer>`) correctamente. Todas las secciones requeridas (presentación, portafolio y contacto) están presentes y funcionales en páginas independientes.
+**Estilos CSS**: El archivo `styles.css` está bien estructurado y separado del HTML. Se aplican estilos consistentes en colores, tipografía y transiciones.
+**Diseño Responsivo**: El sitio se adapta correctamente a las resoluciones de escritorio, tablet y móvil. Flexbox y Grid están implementados correctamente para organizar el contenido.
+**Interactividad**: Los botones y enlaces tienen transiciones suaves. Los elementos del portafolio muestran efectos al interactuar con ellos (hover).
 
 ## Información del Coder
 
