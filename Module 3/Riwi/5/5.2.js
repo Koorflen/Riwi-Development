@@ -1,0 +1,6 @@
+/**
+ * many
+ * lines
+ * of
+ * coments
+ */

@@ -1,0 +1,3 @@
+/*
+JavaScript utiliza un espacio de 64 bits para almacenar un número, lo que permite representar un rango bastante amplio de valores. Sin embargo, no todos los números pueden representarse de manera exacta en este rango. Los números enteros precisos en JavaScript están limitados a lo que se conoce como la zona de seguridad o safe range, que va desde -((2^53) - 1) hasta (2^53) - 1. Es decir, JavaScript garantiza precisión para números enteros entre -9,007,199,254,740,991 y 9,007,199,254,740,991.
+*/
