@@ -1,0 +1,16 @@
+{
+  "name": "diegorojas065",
+  "version": "1.0.0",
+  "description": "Single Page Application for event management",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3000",
+    "dev": "npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
